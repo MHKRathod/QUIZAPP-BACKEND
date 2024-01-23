@@ -17,11 +17,11 @@ app.get("/", (req, res) => {
     res.send("hello geeks");
 })
 
-// app.use("/categories", categoriesRouter)
-// app.use("/quiz", quizRouter);
-// app.use("/auth/login", loginRouter);
-// app.use("/auth/signup", signupRouter);
-// app.use(routeNotFound);
+app.use("/categories", categoriesRouter)
+app.use("/quiz", quizRouter);
+app.use("/auth/login", loginRouter);
+app.use("/auth/signup", signupRouter);
+app.use(routeNotFound);
 
 app.listen(process.env.PORT || PORT, () => {
     console.log("server started....");
